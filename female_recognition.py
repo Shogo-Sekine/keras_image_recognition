@@ -32,7 +32,7 @@ def learn():
             image = np.array(Image.open(filepath).resize((64, 64)))
             print(filepath)
 
-            image = image.transpose(2, 0, 1).reshape(1, image.shape[0] * image.shape[1] * image.shape[2]).astype("float32")[0]
+            image = image.transpose(2, 0, 1).reshape(1, image.shape[0] * image.shape[1] * image.shape[2]).astype('float32')[0]
             image_list.append(image / 255.)
 
     # numpy配列に変換
@@ -86,9 +86,9 @@ def evaluate():
         else:
             label = 2
 
-        for file in os.listdir(dir1):
+        for file_ in os.listdir(dir1):
             label_list.append(label)
-            filepath = dir1 + '/' + file
+            filepath = dir1 + '/' + file_
             image = np.array(Image.open(filepath).resize((64, 64)))
             print(filepath)
             image = image.transpose(2, 0, 1).reshape(1, image.shape[0] * image.shape[1] * image.shape[2]).astype('float32')[0]
