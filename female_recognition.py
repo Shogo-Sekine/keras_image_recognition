@@ -75,13 +75,13 @@ def evaluate():
     total = 0
     ok_count = 0
 
-    for dir in os.listdir('data/test'):
-        dir1 = 'data/test/' + dir
+    for dir_ in os.listdir('data/test'):
+        dir1 = 'data/test/' + dir_
         label = 0
 
-        if dir == 'kaela':
+        if dir_ == 'kaela':
             label = 0
-        elif dir == 'maki':
+        elif dir_ == 'maki':
             label = 1
         else:
             label = 2
